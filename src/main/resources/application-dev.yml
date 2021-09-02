@@ -1,0 +1,88 @@
+#测试环境
+server:
+  port: 14914
+#  servlet:
+#    encoding:
+#      charset: GBK
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+  banner:
+    image:
+      location: classpath:banner.txt
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/springboot2sql?characterEncoding=UTF-8&useUnicode=true&serverTimezone=GMT%2B8
+#    username: root
+#    password: 666666
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    jpa:
+#      database: mysql
+#      hibernate:
+#        dd1-auto: update
+#      show-sql: true
+#      database-platform: org.hibernate.dialect.MySQLDialect
+  redis:
+    #Redis服务器地址
+    host: 192.168.10.102
+    #Redis服务器连接端口
+    port: 6379
+    password: 666666
+    #Redis数据库索引（默认为0）
+    database: 0
+    #连接超时时间（毫秒）
+    timeout: 1800000
+    lettuce:
+      pool:
+        #连接池最大连接数（使用负值表示没有限制）
+        max-active: 20
+        #最大阻塞等待时间(负数表示没限制)
+        max-wait: -1
+        #连接池中的最大空闲连接
+        max-idle: 5
+        #连接池中的最小空闲连接
+        min-idle: 0
+
+com:
+  dokstudio:
+    canghaisangtian: cangHaiSangTian
+    renjianzhengdao: renJianZhengDao
+
+#mycar:
+#  brand: BYD
+#  price: 120000
+
+#debug: true
+
+## yaml表示以上对象
+#person:
+#  userName: zhangsan
+#  boss: false
+#  birth: 2019/12/12 20:12:33
+#  age: 18
+#  pet:
+#    name: tomcat
+#    weight: 23.4
+#  #  interests: [篮球,游泳]
+#  interests:
+#    - 篮球
+#    - 游泳
+#  #  animal: [阿猫,阿狗]
+#  animal:
+#    - jerry
+#    - mario
+#  score:
+#    english:
+#      first: 30
+#      second: 40
+#      third: 50
+#    math: [131,140,148]
+#    chinese: {first: 128,second: 136}
+#  salarys: [3999,4999.98,5999.99]
+#  allPets:
+#    sick:
+#      - name: tom
+#        weight: 22
+#      - {name: jerry,weight: 47}
+#    health: [{name: mario,weight: 47}]
